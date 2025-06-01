@@ -1,0 +1,10 @@
+# BlockDisplay Plugin Configuration
+# Default glow color for block displays
+# Valid colors: BLACK, DARK_BLUE, DARK_GREEN, DARK_AQUA, DARK_RED, DARK_PURPLE, GOLD, GRAY, DARK_GRAY, BLUE, GREEN, AQUA, RED, LIGHT_PURPLE, YELLOW, WHITE
+default-color: GREEN
+
+# Spawn offsets for block displays
+offset:
+  x: 0
+  y: 0
+  z: 0

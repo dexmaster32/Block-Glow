@@ -1,0 +1,20 @@
+name: BlockDisplay
+main: dev.dexmaster.blockdisplay.BlockDisplayPlugin
+version: 1.0.0
+api-version: '1.21.5'
+description: Spawn glowing shulker box block displays with configurable colors and automatic cleanup
+author: DexMaster
+
+commands:
+  bd:
+    description: Block Display commands
+    usage: /bd <spawn|color|reload>
+    aliases: [blockdisplay]
+
+permissions:
+  bd.use:
+    description: Allows spawning block displays
+    default: true
+  bd.admin:
+    description: Allows changing colors and reloading config
+    default: op 
