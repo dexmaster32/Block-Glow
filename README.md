@@ -1,6 +1,6 @@
 # BlockDisplay (Paper 1.21.5)
 
-Spawn a glowing **shulker-box** block-display on any block you look at, choose the glow color, and have it vanish the moment that block breaks.
+Spawn a glowing block-display on any block you look at, choose the glow color, and have it vanish the moment that block breaks.
 
 ---
 
