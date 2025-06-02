@@ -1,24 +1,25 @@
 # BlockDisplay (Paper 1.21.5)
 
-Spawn a glowing **shulker-box** block-display on any block you look at, choose the glow color, and have it vanish the moment that block breaks.
+Spawn a glowing block-display on any block you look at, choose the glow color, and have it vanish the moment that block breaks.
 
 ---
 
 ## Quick Features
-- `/bd color <ChatColor>` – live glow-color swap
+- `/bd color <ChatColor>` – live glow-color swap (each display can have a separate color)
 - Configurable spawn offsets (`x y z`)
 - Tab-complete for sub-commands & colors
 - Auto-remove when support block is destroyed
 - Cleans up on reload/disable, reuses one scoreboard team
+- ❗ Cannot place displays on translucent or non-full blocks
 
 ---
 
 ## Commands & Permissions
-| Command                   | Perm     | Note                           |
-|---------------------------|----------|--------------------------------|
+| Command                   | Perm     | Note                             |
+|---------------------------|----------|----------------------------------|
 | `/bd spawn`               | `bd.use` | Place display on looked-at block |
-| `/bd color <color>`       | `bd.admin` | Change glow outline            |
-| `/bd reload`              | `bd.admin` | Reload `config.yml`            |
+| `/bd color <color>`       | `bd.admin` | Change glow outline              |
+| `/bd reload`              | `bd.admin` | Reload `config.yml`              |
 
 Press **TAB** after `/bd` or `/bd color` for suggestions.
 
@@ -38,3 +39,4 @@ offset:
   x: 0
   y: 0
   z: 0
+```

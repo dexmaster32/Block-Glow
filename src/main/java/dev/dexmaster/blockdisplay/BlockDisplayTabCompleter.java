@@ -1,23 +1,21 @@
 package dev.dexmaster.blockdisplay;
 
-import org.bukkit.ChatColor;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class BlockDisplayTabCompleter implements TabCompleter {
     
-    private static final List<String> VALID_COLORS = Arrays.stream(ChatColor.values())
-            .filter(ChatColor::isColor)
-            .map(color -> color.name().toLowerCase())
-            .collect(Collectors.toList());
+    private static final List<String> VALID_COLORS = Arrays.asList(
+        "black", "dark_blue", "dark_green", "dark_aqua", "dark_red", "dark_purple",
+        "gold", "gray", "dark_gray", "blue", "green", "aqua", "red", "light_purple", "yellow", "white"
+    );
     
-    private static final List<String> SUBCOMMANDS = Arrays.asList("spawn", "color", "reload");
+    private static final List<String> SUBCOMMANDS = Arrays.asList("spawn", "reload");
     
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
@@ -30,8 +28,8 @@ public class BlockDisplayTabCompleter implements TabCompleter {
                     completions.add(subcommand);
                 }
             }
-        } else if (args.length == 2 && args[0].equalsIgnoreCase("color")) {
-            // Second argument for color command - suggest colors
+        } else if (args.length == 2 && args[0].equalsIgnoreCase("spawn")) {
+            // Second argument for spawn command - suggest colors
             for (String color : VALID_COLORS) {
                 if (color.startsWith(args[1].toLowerCase())) {
                     completions.add(color);
